@@ -1,0 +1,20 @@
+.user-details {
+    &__header {
+        margin: 30px;
+    }
+
+    &__content{
+        box-shadow: 7px 5px 21px 7px rgb(233 233 233 / 89%);
+        border-radius: 20px;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__info{
+        display: flex;
+        align-items: center;
+    }
+}

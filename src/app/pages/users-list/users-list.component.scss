@@ -1,0 +1,20 @@
+.list-users {
+    &__header {
+        margin: 30px;
+    }
+
+    &__list-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        box-shadow: 7px 5px 21px 7px rgb(233 233 233 / 89%);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    &__list-item:hover{
+       background-color: #edf2f4; 
+    }
+}

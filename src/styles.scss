@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.toast-top-right {
+    top: 12px;
+    right: 12px;
+}
+
+.toast-success {
+    background-color: #43c261 !important;
+    box-shadow: 7px 5px 21px 7px rgb(233 233 233 / 89%);
+    color: #fff !important;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.toast-error {
+    background-color: #cf1f1f !important;
+    box-shadow: 7px 5px 21px 7px rgb(233 233 233 / 89%);
+    color: #fff !important;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.toast {
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+.toast-title {
+    font-weight: bold;
+}

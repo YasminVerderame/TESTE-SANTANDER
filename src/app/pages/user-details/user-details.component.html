@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row user-details__header">
+        <div class="col-12">
+            <h2>Detalhes do Usuário</h2>
+        </div>
+    </div>
+
+    <div class="row user-details__content">
+        <div class="col-6 user-details__info">
+            <div *ngIf="userDetails">
+                <h3>Nome</h3>
+                <p>{{ userDetails.firstName }} {{ userDetails.lasttName }}</p>
+                <h3>E-mail</h3>
+                <p>{{ userDetails.email }}</p>
+                <app-button 
+                    type="primary" 
+                    size="medium" 
+                    [disabled]="false" 
+                    (onClick)="goBack()">
+                    Voltar
+                </app-button>  
+            </div>
+            <div *ngIf="!userDetails">
+                <p>Carregando detalhes do usuário...</p>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="../../../assets/svg/undraw_information_tab_re_f0w3.svg" alt="">
+        </div>
+    </div>
+</div> 
+<app-footer></app-footer>

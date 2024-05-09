@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row list-users" *ngIf="userList.length > 0">
+        <div class="row list-users__header">
+            <div class="col-9">
+                <h2>Lista de Usuários</h2>
+            </div>
+            <div class="col-3">
+                <app-button 
+                    type="primary" 
+                    size="medium" 
+                    [disabled]="false" 
+                    (onClick)="createUser()">
+                    Criar Novo Usuário
+                </app-button>
+            </div>
+        </div>
+
+        <div class="row list-users__list">
+            <div class="col-12">
+                <ul>
+                    <li *ngFor="let user of userList" class="list-users__list-item">
+                        <div class="list-users__user-name">
+                            <span>{{ user.firstName }} {{ user.lastName }}</span>
+                        </div>
+                        <div class="list-users__buttons">
+                            <app-button 
+                                type="primary" 
+                                size="medium" 
+                                [disabled]="false" 
+                                (onClick)="viewUserDetails(user.id)">
+                                Detalhes
+                            </app-button>
+
+                            <app-button 
+                                type="secondary" 
+                                size="medium" 
+                                [disabled]="false" 
+                                (onClick)="updateUser(user.id)">
+                                Atualizar Dados
+                            </app-button>
+
+                            <app-button 
+                                type="tertiary" 
+                                size="small" 
+                                [disabled]="false" 
+                                (onClick)="deleteUser(user.id)">
+                                Excluir
+                            </app-button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div *ngIf="userList.length === 0">
+        <p>Nenhum usuário encontrado.</p>
+        <button (click)="createUser()">Criar Novo Usuário</button>
+    </div>
+</div>

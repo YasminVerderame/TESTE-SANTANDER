@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row update-user__header">
+        <div class="col-12">
+            <h2>Atualizar Dados do Usuário</h2>
+        </div>
+    </div>
+    <div class="row update-user__content">
+        <div class="col-6 update-user__form">
+            <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+                <div>
+                    <label for="firstName">Primeiro Nome:</label>
+                    <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+                </div>
+                <div>
+                    <label for="lastName">Último Nome:</label>
+                    <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+                </div>
+                <app-button type="primary" size="medium" [disabled]="userForm.invalid ?? false || !formChanged()" (onClick)="onSubmit()">
+                    Salvar Alterações
+                </app-button>
+            </form>
+        </div>
+        <div class="col-6">
+            <img src="../../../assets/svg/undraw_up_to_date_re_nqid.svg" alt="">
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
